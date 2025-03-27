@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Matching Cards </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/wrapper.css" />
+    <link rel="stylesheet" href="./styles/card-wrapper.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="title">
+          <h1>Matching Cards</h1>
+        </div>
+
+        <div class="levels">
+          <button class="easy" title="Easy level">Easy</button>
+          <button class="medium selected" title="Medium level">Medium</button>
+          <button class="hard" title="Hard level">Hard</button>
+        </div>
+
+        <div class="stats-controls">
+          <div class="stats">
+            <div class="time-container">
+              <div>Time</div>
+              <div class="time">
+                <span>00</span> : <span>00</span> : <span>00</span></div
+              >
+            </div>
+
+            <div class="moves-container">
+              <div>Moves</div>
+              <div class="moves">0</div>
+            </div>
+          </div>
+
+          <button class="play-pause" title="Play">
+            <i class="ri-play-fill"></i>
+          </button>
+          <button class="reset" title="Restart">
+            <i class="ri-restart-line"></i>
+          </button>
+        </div>
+
+        <div class="high-score">
+          <div>Highscore</div>
+          <div class="time-container">
+            <div class="time">--:--:--</div>
+            <div class="bottom">Time</div>
+          </div>
+          <div class="moves-container">
+            <div class="moves">--</div>
+            <div class="bottom">Moves</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-container"></div>
+      </div>
+    </main>
+  </body>
+</html>

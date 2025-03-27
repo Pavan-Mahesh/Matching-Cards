@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Grandstander", cursive;
+  color: white;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+:root {
+  --heading: clamp(1.2rem, 5vw, 4rem);
+  --text: clamp(0.8rem, 2.5vw, 2rem);
+  --small-text: clamp(0.6rem, 1.5vw, 1.5rem);
+
+  --background-color: #0a192f;
+  --container-color: #153a6f;
+  --card-back: #1e88e5;
+  --card-front: #e3f2fd;
+
+  --easy: #4caf50;
+  --medium: #ff9800;
+  --hard: #f44336;
+
+  --animation-duration: 300ms;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 10vh 10vw;
+  background-color: var(--background-color);
+  background-image: url(./background.jpg);
+  background-blend-mode: darken;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 5%;
+}
+
+button {
+  will-change: transform;
+  transition: transform 0.15s;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+@media (orientation: portrait) {
+  body::before {
+    content: "Please rotate your device for the best experience.";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    background: var(--container-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  main {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+/* to keep the card open */
+
+.open {
+  transform: rotateY(180deg);
+}
+
+/* card animations */
+
+.added {
+  animation: added var(--animation-duration) ease-in-out forwards;
+}
+
+@keyframes added {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.show {
+  animation: show-card var(--animation-duration) ease-in-out forwards;
+}
+
+@keyframes show-card {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.hide {
+  animation: hide-card var(--animation-duration) ease-in-out forwards;
+}
+
+@keyframes hide-card {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.shake {
+  animation: shake-card var(--animation-duration) ease-in-out forwards;
+}
+
+@keyframes shake-card {
+  0%,
+  100% {
+    transform: rotateY(180deg);
+  }
+
+  20% {
+    transform: rotateY(180deg) translateX(-3px);
+  }
+
+  40% {
+    transform: rotateY(180deg) translateX(3px);
+  }
+
+  60% {
+    transform: rotateY(180deg) translateX(-2px);
+  }
+
+  80% {
+    transform: rotateY(180deg) translateX(2px);
+  }
+}
+
+.bounce {
+  animation: bounce-card var(--animation-duration) ease-in-out forwards;
+}
+
+@keyframes bounce-card {
+  0%,
+  100% {
+    transform: rotateY(180deg) scale(1);
+  }
+
+  50% {
+    transform: rotateY(180deg) scale(1.1);
+  }
+}
+
+/* high score animation */
+
+.dance {
+  animation: dance 1s ease-in-out 2 forwards;
+}
+
+@keyframes dance {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(2deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(-2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
