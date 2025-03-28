@@ -46,7 +46,6 @@ body {
   background-color: var(--background-color);
   background-image: url(./background.jpg);
   background-blend-mode: darken;
-  background-size: 60%;
 }
 
 main {
