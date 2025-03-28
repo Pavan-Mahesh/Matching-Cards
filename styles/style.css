@@ -28,6 +28,7 @@
   --hard: #f44336;
 
   --animation-duration: 300ms;
+  --developed-by: "pavan-mahesh";
 }
 
 html,
@@ -45,6 +46,7 @@ body {
   background-color: var(--background-color);
   background-image: url(./background.jpg);
   background-blend-mode: darken;
+  background-size: 60%;
 }
 
 main {
@@ -85,3 +87,10 @@ button:active {
     display: none;
   }
 }
+
+header,
+footer {
+  display: none;
+}
+
+/* Stylings by Pavan Mahesh */

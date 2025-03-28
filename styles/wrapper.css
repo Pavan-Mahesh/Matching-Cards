@@ -1,3 +1,5 @@
+/* Stylings by Pavan Mahesh */
+
 .wrapper {
   height: 100%;
 
@@ -14,8 +16,19 @@
   flex-grow: 0;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
 .title h1 {
   font-size: var(--heading);
+}
+
+.title span {
+  width: 100%;
+  font-size: clamp(0.4rem, 1vw, 1rem);
+  text-align: end;
 }
 
 .levels {
@@ -134,6 +147,7 @@
   background-color: var(--container-color);
   padding: 5%;
   border-radius: 5px;
+  will-change: transform;
 }
 
 .high-score .time-container,
@@ -157,3 +171,5 @@
 .high-score .moves-container .moves {
   font-family: monospace;
 }
+
+/* Stylings by Pavan Mahesh */

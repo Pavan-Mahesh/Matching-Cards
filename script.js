@@ -1,3 +1,5 @@
+/* Scripted by M. Pavan Mahesh */
+
 const cardContainer = document.querySelector(".card-wrapper .card-container");
 
 const levelBtns = document.querySelectorAll(".levels button");
@@ -157,7 +159,7 @@ function createCards() {
   randImgList.forEach((img, idx) => {
     const card = document.createElement("div");
     card.className = "card";
-    card.dataset.image = img;
+    card.dataset.pm = `pm-${img}`;
     card.innerHTML = `
       <div class="back" style="background-image: url(./assets/question.png)"></div>
       <div class="front" style="background-image: url(./assets/${img}.png)"></div>
@@ -239,7 +241,7 @@ async function onCardClick(card) {
     const [card1, card2] = selectedCards[0];
     selectedCards.splice(0, 1);
 
-    if (card1.dataset.image === card2.dataset.image) {
+    if (card1.dataset.pm === card2.dataset.pm) {
       animate(card1, "bounce");
       animate(card2, "bounce");
       openCardsCount += 2;
