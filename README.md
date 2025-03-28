@@ -5,10 +5,8 @@ A fun and interactive card-matching game where you can **test your memory and sp
 ---
 
 ## 🧑‍💻 **Built With**  
-🔹HTML 🧩 
-
-🔹 CSS 🎨  
-
+🔹HTML 🧩 <br />
+🔹 CSS 🎨  <br />
 🔹 JavaScript 🧠 
 
 ---
