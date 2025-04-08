@@ -14,7 +14,7 @@ const playPauseBtn = document.querySelector(
 const highScoreElem = document.querySelector(".high-score");
 const highScoreTime = highScoreElem.querySelector(".time");
 const highScoreMoves = highScoreElem.querySelector(".moves");
-let highScore = JSON.parse(sessionStorage.getItem("highscore")) || {
+let highScore = JSON.parse(localStorage.getItem("highscore")) || {
   Easy: {
     time: null,
     moves: null,
@@ -335,6 +335,6 @@ function updateHighScore() {
     highScoreMoves.textContent = highScore[currentLevel].moves;
 
     animate(highScoreElem, "dance");
-    sessionStorage.setItem("highscore", JSON.stringify(highScore));
+    localStorage.setItem("highscore", JSON.stringify(highScore));
   }
 }
